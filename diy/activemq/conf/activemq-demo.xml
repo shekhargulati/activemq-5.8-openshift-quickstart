@@ -193,18 +193,7 @@
             http://activemq.apache.org/configuring-transports.html
         -->
         <transportConnectors>
-            <!-- Create a TCP transport that is advertised on via an IP multicast
-              group named default. -->
-            <transportConnector name="openwire" uri="tcp://localhost:61616" discoveryUri="multicast://default"/>
-            <!-- Create a SSL transport. Make sure to configure the SSL options
-              via the system properties or the sslContext element. -->
-            <transportConnector name="ssl" uri="ssl://localhost:61617"/>
-            <!-- Create a STOMP transport for STOMP clients. -->
-            <transportConnector name="stomp" uri="stomp://localhost:61613"/>
-            <!-- Create a XMPP transport for XMPP clients. -->
-            <transportConnector name="xmpp" uri="xmpp://localhost:61222"/>
-            <!-- Create a Websocket transport for the websocket dmeo -->
-            <transportConnector name="ws" uri="ws://localhost:61614/" />
+            <transportConnector name="http" uri="http://OPENSHIFT_DIY_IP:15005"/>
         </transportConnectors>
 
         <!-- destroy the spring context on shutdown to stop jetty -->
